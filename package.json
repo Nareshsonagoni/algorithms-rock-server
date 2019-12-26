@@ -1,0 +1,22 @@
+{
+  "name": "algorithms-rock-server",
+  "version": "1.0.0",
+  "description": "This repository serves as a backend to algorithms-rock-ui repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nash4j/algorithms-rock-server.git"
+  },
+  "author": "Naresh Sonagoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nash4j/algorithms-rock-server/issues"
+  },
+  "homepage": "https://github.com/nash4j/algorithms-rock-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
