@@ -1,0 +1,32 @@
+{
+  "name": "algorithms-rock-server",
+  "version": "1.0.0",
+  "description": "This repository serves as a backend to algorithms-rock-ui repository.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint-fix": "eslint --ignore-path .gitignore . --fix",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nash4j/algorithms-rock-server.git"
+  },
+  "author": "Naresh Sonagoni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nash4j/algorithms-rock-server/issues"
+  },
+  "homepage": "https://github.com/nash4j/algorithms-rock-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-chai-expect": "^2.1.0",
+    "eslint-plugin-mocha": "^6.2.2",
+    "mocha": "^6.2.2"
+  }
+}
