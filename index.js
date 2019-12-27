@@ -1,12 +1,13 @@
+'use strict';
 
 const express = require('express');
 const binary = require('./algorithms/search/binary');
 const app = express();
 
 app.get('/api/binary_search/:item/', (req, res) => {
-    const item = req.params.item;
-    const searchResult = binary(item);
-    res.send(searchResult + '');
+  const item = req.params.item;
+  const searchResult = binary(item);
+  res.send(searchResult + '');
 });
 
 const port = process.env.PORT || 3000;
