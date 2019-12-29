@@ -6,7 +6,7 @@ const app = express();
 
 app.get('/api/binary_search/:item/', (req, res) => {
   const item = req.params.item;
-  const searchResult = binary(item);
+  const searchResult = binary(parseInt(item, 10));
   res.send(searchResult + '');
 });
 
