@@ -1,6 +1,1 @@
-echo "docker version"
-docker version
-
-echo "Running Tests"
-
-npm run test
+docker run -v $(pwd):/app -it --rm  node:alpine app/scripts/run_test.sh
