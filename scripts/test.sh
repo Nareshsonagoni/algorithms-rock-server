@@ -7,5 +7,5 @@ docker run -v $(pwd):/app \
   -it \
   -v $(pwd):/app \
   --entrypoint "ls" \
-  -w / \
+  -w /usr \
   --rm  node:alpine
