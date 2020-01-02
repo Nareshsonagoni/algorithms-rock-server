@@ -10,5 +10,4 @@ docker run -v $(pwd):/app \
   -v "/var/run/docker.sock:/var/run/docker.sock" \
   -e "BUILDKITE_BUILD_PATH=/var/lib/buildkite/builds" \
   --entrypoint "ls" \
-  -w /app \
   --rm  node:alpine
