@@ -6,6 +6,4 @@ docker run -v $(pwd):/app -it \
   -v "/usr/local/bin/buildkite-agent:/usr/local/bin/buildkite-agent" \
   -v "/var/run/docker.sock:/var/run/docker.sock" \
   -e "BUILDKITE_BUILD_PATH=/var/lib/buildkite/builds" \
-  -d \
-  -t \
   --rm  node:alpine /app/scripts/run_test.sh
