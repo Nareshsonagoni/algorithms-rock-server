@@ -8,4 +8,4 @@ docker run -v $(pwd):/app -it \
   -e "BUILDKITE_BUILD_PATH=/var/lib/buildkite/builds" \
   -d \
   -t \
-  --rm  node:alpine /buildkite/builds/8d3ff62e811d-1/algorithms-rock-1/algorithms-rock-server/scripts/run_test.sh
+  --rm  node:alpine /app/scripts/run_test.sh
