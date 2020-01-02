@@ -5,7 +5,6 @@ pwd
 
 docker run -v /Users/kkisha/Desktop/Projects/algorithms-rock-server:/app \
   -it \
-  -v $(pwd):/app \
   --entrypoint "ls" \
   -w /app \
   --rm  node:alpine
