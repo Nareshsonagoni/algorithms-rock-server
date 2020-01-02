@@ -1,7 +1,7 @@
 echo "Running tests on a docker container"
 pwd
 
-docker run -v $(pwd):/app -it -w /app --rm --entrypoint  "pwd"  node:alpine
+docker run -v $(pwd):/app -it -w /app --rm --entrypoint  "ls"  node:alpine
 
 # docker run -v $(pwd):/app \
 #   -it \
