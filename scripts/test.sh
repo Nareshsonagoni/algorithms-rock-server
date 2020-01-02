@@ -3,9 +3,9 @@ pwd
 ls
 # docker run -v $(pwd):/app -it --rm --entrypoint  "ls"  node:alpine
 
-docker run -v $(pwd):/app \
+docker run -v /buildkite/builds/7cd9ce752449-1/algorithms-rock-1/algorithms-rock-server:/buildkite/builds/7cd9ce752449-1/algorithms-rock-1/algorithms-rock-server \
   -it \
   -v $(pwd):/app \
   --entrypoint "ls" \
-  -w /usr \
+  -w /buildkite/builds/7cd9ce752449-1/algorithms-rock-1/algorithms-rock-server \
   --rm  node:alpine
