@@ -1,6 +1,6 @@
 
 echo "coming here"
 pwd
-cd app
+cd /app
 npm install
 npm run test
