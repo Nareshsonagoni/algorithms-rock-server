@@ -5,5 +5,6 @@ steps:
     # - label: Running lint
     #   command: 'scripts/test_lint.sh'
 
-    - label: Deploy Project
+    - wait: ~
+    - label: Deploying Project
       command: 'scripts/serverless_script.sh'

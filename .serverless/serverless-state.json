@@ -6,7 +6,7 @@
     },
     "provider": {
       "stage": "dev",
-      "variableSyntax": "\\${([ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)*?]+?)}",
+      "variableSyntax": "\\${([ ~:a-zA-Z0-9._@'\",\\-\\/\\(\\)*]+?)}",
       "name": "aws",
       "runtime": "nodejs12.x",
       "region": "us-east-1",
@@ -24,46 +24,6 @@
                   {
                     "ServerSideEncryptionByDefault": {
                       "SSEAlgorithm": "AES256"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "ServerlessDeploymentBucketPolicy": {
-            "Type": "AWS::S3::BucketPolicy",
-            "Properties": {
-              "Bucket": {
-                "Ref": "ServerlessDeploymentBucket"
-              },
-              "PolicyDocument": {
-                "Statement": [
-                  {
-                    "Action": "s3:*",
-                    "Effect": "Deny",
-                    "Principal": "*",
-                    "Resource": [
-                      {
-                        "Fn::Join": [
-                          "",
-                          [
-                            "arn:",
-                            {
-                              "Ref": "AWS::Partition"
-                            },
-                            ":s3:::",
-                            {
-                              "Ref": "ServerlessDeploymentBucket"
-                            },
-                            "/*"
-                          ]
-                        ]
-                      }
-                    ],
-                    "Condition": {
-                      "Bool": {
-                        "aws:SecureTransport": false
-                      }
                     }
                   }
                 ]
@@ -113,8 +73,7 @@
                       {
                         "Effect": "Allow",
                         "Action": [
-                          "logs:CreateLogStream",
-                          "logs:CreateLogGroup"
+                          "logs:CreateLogStream"
                         ],
                         "Resource": [
                           {
@@ -160,7 +119,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/algorithms-rock-server/dev/1578215582059-2020-01-05T09:13:02.059Z/algorithms-rock-server.zip"
+                "S3Key": "serverless/algorithms-rock-server/dev/1578218826949-2020-01-05T10:07:06.949Z/algorithms-rock-server.zip"
               },
               "FunctionName": "algorithms-rock-server-dev-binarySearch",
               "Handler": "handler.binarySearch",
@@ -179,14 +138,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "BinarySearchLambdaVersionRWI4AOvOPUxs880wZcbZ9LnC5KYKI3ylanw8eSfsZE": {
+          "BinarySearchLambdaVersionmrHfhDhG2YBj6B5VyBlVafWYc0Za0dTkhAvmKe4pM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "BinarySearchLambdaFunction"
               },
-              "CodeSha256": "rtOZQfVlWkolbJj44U5fShActZnRqLzKaFYJVlBQnLE="
+              "CodeSha256": "6RvtBxKfE+Q/gWjFZkrD1NQKb+IQRtXX3lC2Hm2fE6o="
             }
           },
           "ApiGatewayRestApi": {
@@ -282,7 +241,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1578215563625": {
+          "ApiGatewayDeployment1578218769924": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -298,16 +257,9 @@
             "Type": "AWS::Lambda::Permission",
             "Properties": {
               "FunctionName": {
-                "Fn::Join": [
-                  ":",
-                  [
-                    {
-                      "Fn::GetAtt": [
-                        "BinarySearchLambdaFunction",
-                        "Arn"
-                      ]
-                    }
-                  ]
+                "Fn::GetAtt": [
+                  "BinarySearchLambdaFunction",
+                  "Arn"
                 ]
               },
               "Action": "lambda:InvokeFunction",
@@ -348,7 +300,7 @@
           "BinarySearchLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "BinarySearchLambdaVersionRWI4AOvOPUxs880wZcbZ9LnC5KYKI3ylanw8eSfsZE"
+              "Ref": "BinarySearchLambdaVersionmrHfhDhG2YBj6B5VyBlVafWYc0Za0dTkhAvmKe4pM"
             }
           },
           "ServiceEndpoint": {
@@ -393,46 +345,6 @@
                 ]
               }
             }
-          },
-          "ServerlessDeploymentBucketPolicy": {
-            "Type": "AWS::S3::BucketPolicy",
-            "Properties": {
-              "Bucket": {
-                "Ref": "ServerlessDeploymentBucket"
-              },
-              "PolicyDocument": {
-                "Statement": [
-                  {
-                    "Action": "s3:*",
-                    "Effect": "Deny",
-                    "Principal": "*",
-                    "Resource": [
-                      {
-                        "Fn::Join": [
-                          "",
-                          [
-                            "arn:",
-                            {
-                              "Ref": "AWS::Partition"
-                            },
-                            ":s3:::",
-                            {
-                              "Ref": "ServerlessDeploymentBucket"
-                            },
-                            "/*"
-                          ]
-                        ]
-                      }
-                    ],
-                    "Condition": {
-                      "Bool": {
-                        "aws:SecureTransport": false
-                      }
-                    }
-                  }
-                ]
-              }
-            }
           }
         },
         "Outputs": {
@@ -466,16 +378,15 @@
         "memory": 1024,
         "timeout": 6,
         "runtime": "nodejs12.x",
-        "vpc": {},
-        "versionLogicalId": "BinarySearchLambdaVersionRWI4AOvOPUxs880wZcbZ9LnC5KYKI3ylanw8eSfsZE"
+        "vpc": {}
       }
     },
     "serviceFilename": "serverless.yml",
     "layers": {},
-    "artifact": "/Users/kkisha/Desktop/Projects/algorithms-rock-server/.serverless/algorithms-rock-server.zip"
+    "artifact": "/app/.serverless/algorithms-rock-server.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/algorithms-rock-server/dev/1578215582059-2020-01-05T09:13:02.059Z",
+    "artifactDirectoryName": "serverless/algorithms-rock-server/dev/1578218826949-2020-01-05T10:07:06.949Z",
     "artifact": "algorithms-rock-server.zip"
   }
 }
