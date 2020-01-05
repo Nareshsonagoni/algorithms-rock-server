@@ -1,3 +1,6 @@
 steps:
     - label: Running Test
       command: 'scripts/test.sh'
+      
+    # - label: Running lint
+    #   command: 'scripts/test_lint.sh'
