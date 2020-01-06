@@ -105,7 +105,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/algorithms-rock-server/dev/1578218826949-2020-01-05T10:07:06.949Z/algorithms-rock-server.zip"
+          "S3Key": "serverless/algorithms-rock-server/dev/1578232375893-2020-01-05T13:52:55.893Z/algorithms-rock-server.zip"
         },
         "FunctionName": "algorithms-rock-server-dev-binarySearch",
         "Handler": "handler.binarySearch",
@@ -124,14 +124,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "BinarySearchLambdaVersionmrHfhDhG2YBj6B5VyBlVafWYc0Za0dTkhAvmKe4pM": {
+    "BinarySearchLambdaVersion51HqyvX0cUHT2t1d8NdJ2MGc94MPAjU14yuNmZPoo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "BinarySearchLambdaFunction"
         },
-        "CodeSha256": "6RvtBxKfE+Q/gWjFZkrD1NQKb+IQRtXX3lC2Hm2fE6o="
+        "CodeSha256": "q+OhvgWKWtVOT4gpaBDg0qh299W9oQVkVE3KVIADKuk="
       }
     },
     "ApiGatewayRestApi": {
@@ -227,7 +227,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1578218769924": {
+    "ApiGatewayDeployment1578232313335": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -286,7 +286,7 @@
     "BinarySearchLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "BinarySearchLambdaVersionmrHfhDhG2YBj6B5VyBlVafWYc0Za0dTkhAvmKe4pM"
+        "Ref": "BinarySearchLambdaVersion51HqyvX0cUHT2t1d8NdJ2MGc94MPAjU14yuNmZPoo"
       }
     },
     "ServiceEndpoint": {

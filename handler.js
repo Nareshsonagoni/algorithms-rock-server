@@ -8,7 +8,7 @@ module.exports.binarySearch = async event => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        result: result + '',
+        result: `Index of the number ${result + ''}`,
       },
       null,
       2,
