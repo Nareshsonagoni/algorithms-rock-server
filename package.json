@@ -27,7 +27,7 @@
     "eslint-config-strongloop": "^2.1.0",
     "eslint-plugin-chai-expect": "^2.1.0",
     "eslint-plugin-mocha": "^6.2.2",
-    "mocha": "^6.2.2",
+    "mocha": "^6.2.3",
     "serverless-offline": "^5.12.1"
   }
 }
